@@ -4,7 +4,7 @@ import tensorflow as tf
 from PIL import Image
 
 
-model = tf.keras.models.load_model("C:/Users/nadou/OneDrive/Documents/disease/disease_plant_transfer.h5")
+model = tf.keras.models.load_model("disease_plant_CNN_v3.h5")
 
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ def hello_word():
 def predict():
     imagefile= request.files['imagefile']
 
-    image_path = "C:/Users/nadou/PycharmProjects/plant_prediction/images/" + imagefile.filename
+    image_path = "C:/Users/nadou/PycharmProjects/plant_prediction/images" + imagefile.filename
     imagefile.save(image_path)
 
 
